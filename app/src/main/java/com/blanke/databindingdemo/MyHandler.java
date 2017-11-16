@@ -15,13 +15,13 @@ public class MyHandler {
     }
 
     public void clickContent(View view, News news) {
-        Toast.makeText(view.getContext(), news.getContent(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), news.getContent().get(), Toast.LENGTH_SHORT).show();
     }
 
     public void clickButton(View view, News news) {
-//        Toast.makeText(view.getContext(), "click button ,news=" + news, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(view.getContext(), "click button ,news=" + news.getContent(), Toast.LENGTH_SHORT).show();
         Random random = new Random();
-        news.setTitle("title " + random.nextInt(100) );
-        news.setContent("content " + random.nextInt(100) );
+        news.setTitle("title " + random.nextInt(100));
+        news.setContent("content " + random.nextInt(100));
     }
 }
