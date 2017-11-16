@@ -1,8 +1,10 @@
 package com.blanke.databindingdemo;
 
+import android.databinding.BindingAdapter;
 import android.databinding.BindingMethod;
 import android.databinding.BindingMethods;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +22,11 @@ import java.util.Random;
                 method = "setText"),
 })
 public class MyHandler {
+    @BindingAdapter(value = {"btext"}, requireAll = false)
+    public static void setxxxBText(Button button, String text) {
+        button.setText("Button : " + text);
+    }
+
     public void clickTitle(View view) {
         Toast.makeText(view.getContext(), "click title", Toast.LENGTH_SHORT).show();
     }
