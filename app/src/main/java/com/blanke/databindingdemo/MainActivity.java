@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setNews(new News("title...", "content....."));
+        binding.setNews(new News(null, null));
         binding.setHandler(new MyHandler());
     }
 }

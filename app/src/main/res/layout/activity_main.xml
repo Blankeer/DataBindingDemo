@@ -26,12 +26,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{handler::clickTitle}"
-            android:text="@{news.title}" />
+            android:text="@{news.title ?? @string/default_title}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{(view)->handler.clickContent(view,news)}"
-            android:text="@{news.content}" />
+            android:text="@{news.content ?? @string/default_content}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v)->handler.clickButton(v,news)}"
+            android:text="submit" />
     </LinearLayout>
 </layout>

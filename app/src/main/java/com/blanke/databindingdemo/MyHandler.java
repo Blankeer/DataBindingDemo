@@ -15,4 +15,8 @@ public class MyHandler {
     public void clickContent(View view, News news) {
         Toast.makeText(view.getContext(), news.getContent(), Toast.LENGTH_SHORT).show();
     }
+
+    public void clickButton(View view, News news) {
+        Toast.makeText(view.getContext(), "click button ,news=" + news, Toast.LENGTH_SHORT).show();
+    }
 }
