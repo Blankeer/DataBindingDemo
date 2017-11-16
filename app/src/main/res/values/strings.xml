@@ -2,4 +2,6 @@
     <string name="app_name">DataBindingDemo</string>
     <string name="default_title">default_title</string>
     <string name="default_content">default_content</string>
+    <string name="blue">#0000FF</string>
+    <string name="red">#FF0000</string>
 </resources>

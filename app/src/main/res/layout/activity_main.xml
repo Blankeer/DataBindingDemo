@@ -37,6 +37,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@{news.content==null? @string/red:@string/blue}"
             android:onClick="@{(v)->handler.clickButton(v,news)}"
             app:btext="@{news.title ?? @string/default_title}"
             android:text="submit" />

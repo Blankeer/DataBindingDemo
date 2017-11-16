@@ -1,8 +1,12 @@
 package com.blanke.databindingdemo;
 
 import android.databinding.BindingAdapter;
+import android.databinding.BindingConversion;
 import android.databinding.BindingMethod;
 import android.databinding.BindingMethods;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +29,11 @@ public class MyHandler {
     @BindingAdapter(value = {"btext"}, requireAll = false)
     public static void setxxxBText(Button button, String text) {
         button.setText("Button : " + text);
+    }
+
+    @BindingConversion
+    public static Drawable getDrawableById(String color) {
+        return new ColorDrawable(Color.parseColor(color));
     }
 
     public void clickTitle(View view) {
