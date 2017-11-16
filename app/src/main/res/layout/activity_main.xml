@@ -9,6 +9,10 @@
             name="news"
             type="com.blanke.databindingdemo.News" />
 
+        <variable
+            name="handler"
+            type="com.blanke.databindingdemo.MyHandler" />
+
     </data>
 
     <LinearLayout
@@ -21,11 +25,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{handler::clickTitle}"
             android:text="@{news.title}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{(view)->handler.clickContent(view,news)}"
             android:text="@{news.content}" />
     </LinearLayout>
 </layout>
